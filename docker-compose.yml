@@ -1,0 +1,38 @@
+name: hyperf-telescope
+services:
+  app:
+    image: hyperf-telescope
+    container_name: hyperf-telescope
+    build:
+      context: .
+    init: true
+    command: php /opt/www/bin/hyperf.php server:watch
+    #command: php /opt/www/bin/hyperf.php start
+    volumes:
+      - ./:/opt/www
+    ports:
+      - "9501:9501"
+    environment:
+      - SCAN_CACHEABLE=false
+      - REDIS_HOST=redis
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9501/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+
+  redis:
+    container_name: hyperf-telescope-redis
+    image: redis:latest
+    command: redis-server --loglevel warning --requirepass password
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "password", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
