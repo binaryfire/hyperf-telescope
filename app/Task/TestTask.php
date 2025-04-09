@@ -17,7 +17,7 @@ class TestTask
      * Execute the task.
      */
     #[Crontab(
-        name: "sqlite-vacuum",
+        name: "test-tast",
         rule: "* * * * *",  // Every minute
         memo: "Test task"
     )]
