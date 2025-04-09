@@ -18,7 +18,7 @@ class FilteredStdoutLogger extends StdoutLogger
             'FriendsOfHyperf\Telescope\Listener',
             'Hyperf\Crontab\Listener\OnPipeMessageListener',
             'Hyperf\ModelListener\Listener',
-            'Sonicstack\Hyperf\Core\Listeners\DbQueryExecutedListener',
+            'App\Listener\DbQueryExecutedListener',
         ]],
     ];
 
