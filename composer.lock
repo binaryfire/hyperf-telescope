@@ -7306,16 +7306,16 @@
         },
         {
             "name": "friendsofhyperf/telescope",
-            "version": "v3.1.58",
+            "version": "v3.1.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/friendsofhyperf/telescope.git",
-                "reference": "8cc8221b708a07980865a7c66b71734131c3edef"
+                "reference": "0007decd10a341240e9d8069b68482595f0e436f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/friendsofhyperf/telescope/zipball/8cc8221b708a07980865a7c66b71734131c3edef",
-                "reference": "8cc8221b708a07980865a7c66b71734131c3edef",
+                "url": "https://api.github.com/repos/friendsofhyperf/telescope/zipball/0007decd10a341240e9d8069b68482595f0e436f",
+                "reference": "0007decd10a341240e9d8069b68482595f0e436f",
                 "shasum": ""
             },
             "require": {
@@ -7384,7 +7384,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-28T00:04:42+00:00"
+            "time": "2025-04-10T01:43:10+00:00"
         },
         {
             "name": "friendsofphp/php-cs-fixer",
